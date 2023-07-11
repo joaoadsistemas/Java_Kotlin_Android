@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         p1.setPrimeiroNome("Joao");
         p1.setTelefoneContato("15-99123488");
 
-        Log.i("MENSAGEM", p1.toString());
 
         editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
         editSobrenome = findViewById(R.id.editSobrenome);
