@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -37,23 +36,24 @@ public class MainActivity extends AppCompatActivity {
         preferences = getSharedPreferences(NOME_PREFERENCES, 0);
         SharedPreferences.Editor listaVip = preferences.edit();
 
-        p1.setCursoDesejado("Android");
-        p1.setSobrenome("Silveira");
-        p1.setPrimeiroNome("Joao");
-        p1.setTelefoneContato("15-99123488");
-
+        p1.setPrimeiroNome(preferences.getString("primeiroNome", ""));
+        p1.setSobrenome(preferences.getString("sobrenome", ""));
+        p1.setCursoDesejado(preferences.getString("nomeCurso", ""));
+        p1.setTelefoneContato(preferences.getString("telefoneContato", ""));
 
         editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
         editSobrenome = findViewById(R.id.editSobrenome);
         editNomeCurso = findViewById(R.id.editNomeCurso);
         editTelefoneContato = findViewById(R.id.editTelefoneContato);
 
+        editPrimeiroNome.setText(p1.getPrimeiroNome());
+        editSobrenome.setText(p1.getSobrenome());
+        editNomeCurso.setText(p1.getCursoDesejado());
+        editTelefoneContato.setText(p1.getTelefoneContato());
+
         btnLimpar = findViewById(R.id.btnLimpar);
         btnSalvar = findViewById(R.id.btnSalvar);
         btnFinalizar = findViewById(R.id.btnFinalizar);
-
-        editPrimeiroNome.setText(p1.getPrimeiroNome());
-        editSobrenome.setText(p1.getSobrenome());
 
         btnLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
