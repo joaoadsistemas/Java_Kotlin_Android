@@ -10,11 +10,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import devandroid.silveira.applistacurso.R;
+import devandroid.silveira.applistacurso.controller.PessoaController;
 import devandroid.silveira.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
 
     Pessoa p1 = new Pessoa();
+    PessoaController controller = new PessoaController();
     EditText editPrimeiroNome;
     EditText editSobrenome;
     EditText editNomeCurso;
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         btnFinalizar = findViewById(R.id.btnFinalizar);
 
         editPrimeiroNome.setText(p1.getPrimeiroNome());
+        editSobrenome.setText(p1.getSobrenome());
 
         btnLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 p1.setCursoDesejado(editNomeCurso.getText().toString());
                 p1.setTelefoneContato(editTelefoneContato.getText().toString());
 
-                Toast.makeText(MainActivity.this, p1.toString(), Toast.LENGTH_LONG).show();
+                controller.salvar(p1);
             }
         });
 
