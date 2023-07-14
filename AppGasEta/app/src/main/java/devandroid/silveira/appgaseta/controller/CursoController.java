@@ -1,9 +1,9 @@
-package devandroid.silveira.applistacurso.controller;
+package devandroid.silveira.appgaseta.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import devandroid.silveira.applistacurso.model.Curso;
+import devandroid.silveira.appgaseta.model.Curso;
 
 public class CursoController {
 
