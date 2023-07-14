@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         editNomeCurso = findViewById(R.id.editNomeCurso);
         editTelefoneContato = findViewById(R.id.editTelefoneContato);
         spinner = findViewById(R.id.spinner);
+        //APP GAS ETA
 
         editPrimeiroNome.setText(p1.getPrimeiroNome());
         editSobrenome.setText(p1.getSobrenome());
