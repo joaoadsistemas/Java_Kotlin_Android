@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import devandroid.silveira.appgaseta.R;
 import devandroid.silveira.appgaseta.apoio.UtilGasEta;
+import devandroid.silveira.appgaseta.controller.CombustivelController;
 import devandroid.silveira.appgaseta.model.Combustivel;
 
 public class GasEtaActivity extends AppCompatActivity {
@@ -20,6 +21,8 @@ public class GasEtaActivity extends AppCompatActivity {
 
     Combustivel combustivelGasolina;
     Combustivel combustivelEtanol;
+
+    CombustivelController combustivelController;
 
     double precoGasolina;
     double precoEtanol;
@@ -41,6 +44,9 @@ public class GasEtaActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gaseta);
+
+
+        combustivelController = new CombustivelController(GasEtaActivity.this);
 
         editGasolina = findViewById(R.id.editGasolina);
         editEtanol = findViewById(R.id.editEtanol);
@@ -80,6 +86,11 @@ public class GasEtaActivity extends AppCompatActivity {
 
                     txtResultado.setText(recomendacao);
 
+                    btnSalvar.setEnabled(true);
+                } else {
+                    Toast.makeText(GasEtaActivity.this, "Por favor, digite os dados obrigatórios...", Toast.LENGTH_LONG).show();
+
+                    btnSalvar.setEnabled(false);
                 }
 
 
@@ -103,7 +114,7 @@ public class GasEtaActivity extends AppCompatActivity {
                 combustivelGasolina.setRecomendacao(UtilGasEta.calcularMelhorOpcao(precoGasolina, precoEtanol));
                 combustivelEtanol.setRecomendacao(UtilGasEta.calcularMelhorOpcao(precoGasolina, precoEtanol));
 
-
+                combustivelController.salvar(combustivelEtanol);
 
 
             }
@@ -115,6 +126,10 @@ public class GasEtaActivity extends AppCompatActivity {
                 editEtanol.setText("");
                 editGasolina.setText("");
                 txtResultado.setText("");
+                btnSalvar.setEnabled(false);
+
+                combustivelController.limpar();
+
             }
         });
 
