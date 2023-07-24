@@ -11,6 +11,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.List;
+
 import devandroid.silveira.appgaseta.R;
 import devandroid.silveira.appgaseta.apoio.UtilGasEta;
 import devandroid.silveira.appgaseta.controller.CombustivelController;
@@ -28,6 +30,7 @@ public class GasEtaActivity extends AppCompatActivity {
     double precoEtanol;
     String recomendacao;
 
+    List<Combustivel> dados;
 
     EditText editGasolina;
     EditText editEtanol;
@@ -47,6 +50,8 @@ public class GasEtaActivity extends AppCompatActivity {
 
 
         combustivelController = new CombustivelController(GasEtaActivity.this);
+
+        dados = combustivelController.getListaDeDados();
 
         editGasolina = findViewById(R.id.editGasolina);
         editEtanol = findViewById(R.id.editEtanol);
@@ -115,6 +120,7 @@ public class GasEtaActivity extends AppCompatActivity {
                 combustivelEtanol.setRecomendacao(UtilGasEta.calcularMelhorOpcao(precoGasolina, precoEtanol));
 
                 combustivelController.salvar(combustivelEtanol);
+                combustivelController.salvar(combustivelGasolina);
 
 
             }
