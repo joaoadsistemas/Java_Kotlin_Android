@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/estrada"
     tools:context=".view.GasEtaActivity">
 
     <ScrollView
@@ -27,6 +28,7 @@
                 android:layout_marginEnd="16dp"
                 android:gravity="center_horizontal"
                 android:text="@string/txt_titulo"
+                android:textColor="#FFFFFF"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -55,7 +57,9 @@
                     android:layout_marginEnd="48dp"
                     android:ems="10"
                     android:hint="@string/txt_hint_edit_gasolina"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF" />
 
                 <EditText
                     android:id="@+id/editEtanol"
@@ -66,7 +70,9 @@
                     android:layout_marginEnd="16dp"
                     android:ems="10"
                     android:hint="@string/txt_hint_edit_etanol"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF" />
 
 
             </LinearLayout>
@@ -88,11 +94,12 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="48dp"
                 android:layout_marginEnd="16dp"
+                android:background="#092061"
                 android:gravity="center_horizontal"
                 android:text="@string/txt_resultado"
+                android:textColor="#FFFFFF"
                 android:textSize="24sp"
                 android:textStyle="bold" />
-
 
             <Button
                 android:id="@+id/btnLimpar"
@@ -111,7 +118,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:enabled="false"
-                android:text="@string/txt_button_salvar" />
+                android:text="@string/txt_button_salvar"
+                android:textColor="#FFFFFF" />
 
 
             <Button
