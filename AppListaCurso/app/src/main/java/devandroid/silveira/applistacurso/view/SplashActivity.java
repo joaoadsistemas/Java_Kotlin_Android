@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import devandroid.silveira.applistacurso.R;
+import devandroid.silveira.applistacurso.database.AppListaVipDB;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -27,6 +28,8 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+
+                AppListaVipDB db = new AppListaVipDB(SplashActivity.this);
 
                 Intent telaPrincipal = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(telaPrincipal);

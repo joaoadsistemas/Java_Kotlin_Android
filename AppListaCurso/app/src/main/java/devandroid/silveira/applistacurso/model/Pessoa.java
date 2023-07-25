@@ -2,6 +2,7 @@ package devandroid.silveira.applistacurso.model;
 
 public class Pessoa {
 
+    private int id;
     private String primeiroNome;
     private String sobrenome;
     private String cursoDesejado;
@@ -54,5 +55,13 @@ public class Pessoa {
                 ", cursoDesejado='" + cursoDesejado + '\'' +
                 ", telefoneContato='" + telefoneContato + '\'' +
                 '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

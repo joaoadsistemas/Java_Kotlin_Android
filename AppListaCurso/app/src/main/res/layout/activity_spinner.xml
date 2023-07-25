@@ -52,16 +52,6 @@
                 android:hint="@string/txt_hint_edit_sobrenome"
                 android:inputType="text" />
 
-            <EditText
-                android:id="@+id/editNomeCurso"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:ems="10"
-                android:hint="@string/txt_hint_edit_nome_do_curso"
-                android:inputType="text" />
 
             <EditText
                 android:id="@+id/editTelefoneContato"
