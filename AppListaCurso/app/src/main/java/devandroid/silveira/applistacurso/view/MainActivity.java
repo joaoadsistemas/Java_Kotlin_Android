@@ -70,8 +70,9 @@ public class MainActivity extends AppCompatActivity {
 
         spinner.setAdapter(adapter);
 
-        controller.getlistaDeDados();
+        // testes abaixo
 
+        controller.getlistaDeDados();
         controller.deletar(5);
 
 
