@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
 
+
         txtNome.setText(bundle.getString("nome"));
         txtEmail.setText(bundle.getString("email"));
         txtSexo.setText((bundle.getString("sexo")));
