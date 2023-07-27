@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AppMinhaIdeia</string>
+    <string name="txtNome">NOME</string>
+    <string name="txtEmail">EMAIL</string>
+    <string name="txtSexo">SEXO</string>
+    <string name="txtCarregando">Carregando...</string>
+    <string name="txtAppVersion">Versão</string>
+</resources>
