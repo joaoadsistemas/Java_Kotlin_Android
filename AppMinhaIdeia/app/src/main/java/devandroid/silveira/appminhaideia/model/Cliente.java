@@ -1,16 +1,19 @@
 package devandroid.silveira.appminhaideia.model;
 
-public class Cliente {
+import devandroid.silveira.appminhaideia.controller.ICrud;
+
+public class Cliente implements ICrud {
+
+    private int id; // Chave primaria no banco de dados
 
     private String nome;
     private String email;
-    private String sexo;
 
     public Cliente(String nome, String email, String sexo){
 
         setNome(nome);
         setEmail(email);
-        setSexo(sexo);
+
 
     };
 
@@ -30,11 +33,32 @@ public class Cliente {
         this.email = email;
     }
 
-    public String getSexo() {
-        return sexo;
+    public int getId() {
+        return id;
     }
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
+    @Override
+    public void incluir(Cliente obj) {
+
+    }
+
+    @Override
+    public void deletar() {
+
+    }
+
+    @Override
+    public void listar() {
+
+    }
+
+    @Override
+    public void alterar() {
+
     }
 }
