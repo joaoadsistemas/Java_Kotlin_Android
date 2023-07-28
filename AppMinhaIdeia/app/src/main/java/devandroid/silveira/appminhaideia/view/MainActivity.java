@@ -24,12 +24,7 @@ public class MainActivity extends AppCompatActivity {
         txtEmail = findViewById(R.id.txtEmail);
         txtSexo = findViewById(R.id.txtSexo);
 
-        Bundle bundle = getIntent().getExtras();
 
-
-        txtNome.setText(bundle.getString("nome"));
-        txtEmail.setText(bundle.getString("email"));
-        txtSexo.setText((bundle.getString("sexo")));
 
 
     }

@@ -10,19 +10,19 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 import devandroid.silveira.appminhaideia.R;
+import devandroid.silveira.appminhaideia.controller.ClienteController;
+import devandroid.silveira.appminhaideia.controller.ProdutoController;
 import devandroid.silveira.appminhaideia.core.AppUtil;
 import devandroid.silveira.appminhaideia.model.Cliente;
 
 public class SplashActivity extends AppCompatActivity {
 
     public static final int TIME_OUT_SPLASH = 3000;
-    Cliente objCliente = new Cliente(
-            "Joao",
-            "joaoadsistemas@gmail.com",
-            "M"
-    );
+
 
     TextView txtAppVersion;
+    ClienteController clienteController;
+    ProdutoController produtoController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,8 @@ public class SplashActivity extends AppCompatActivity {
 
         txtAppVersion.setText(versao);
 
-
+        clienteController = new ClienteController(this);
+        produtoController = new ProdutoController(this);
 
         inicializarMain();
 
@@ -49,13 +50,7 @@ public class SplashActivity extends AppCompatActivity {
 
                 Intent telaPrincipal = new Intent(SplashActivity.this, MainActivity.class);
 
-                Bundle bundle = new Bundle();
 
-                bundle.putString("nome", objCliente.getNome());
-                bundle.putString("email", objCliente.getEmail());
-                bundle.putString("sexo", objCliente.getSexo());
-
-                telaPrincipal.putExtras(bundle);
                 startActivity(telaPrincipal);
                 finish();
             }

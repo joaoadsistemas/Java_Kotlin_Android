@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import devandroid.silveira.appminhaideia.datamodel.ClienteDataModel;
+import devandroid.silveira.appminhaideia.datamodel.ProdutoDataModel;
 
 
 public class AppDataBase extends SQLiteOpenHelper {
@@ -26,6 +27,7 @@ public class AppDataBase extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL(ClienteDataModel.criarTabela());
+        db.execSQL(ProdutoDataModel.criarTabela());
 
     }
 
