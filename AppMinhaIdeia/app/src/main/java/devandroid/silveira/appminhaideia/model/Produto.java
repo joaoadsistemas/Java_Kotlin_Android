@@ -2,6 +2,7 @@ package devandroid.silveira.appminhaideia.model;
 
 public class Produto {
 
+    private int id;
     private String marca;
     private String produto;
 
@@ -27,5 +28,13 @@ public class Produto {
 
     public void setProduto(String produto) {
         this.produto = produto;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
