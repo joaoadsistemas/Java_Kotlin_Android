@@ -1,12 +1,15 @@
 package devandroid.silveira.appminhaideia.controller;
 
+import java.util.List;
+
 import devandroid.silveira.appminhaideia.model.Cliente;
 
-public interface ICrud {
+// <T> significa que posso passar como parametro qualquer objeto
+public interface ICrud<T> {
 
-    public void incluir(Cliente obj);
-    public void deletar();
-    public void listar();
-    public void alterar();
+    public void incluir(T obj);
+    public void deletar(T obj);
+    public List<T> listar();
+    public void alterar(T obj);
 
 }

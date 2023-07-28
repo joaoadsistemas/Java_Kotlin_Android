@@ -2,7 +2,7 @@ package devandroid.silveira.appminhaideia.model;
 
 import devandroid.silveira.appminhaideia.controller.ICrud;
 
-public class Cliente implements ICrud {
+public class Cliente {
 
     private int id; // Chave primaria no banco de dados
 
@@ -41,24 +41,4 @@ public class Cliente implements ICrud {
         this.id = id;
     }
 
-
-    @Override
-    public void incluir(Cliente obj) {
-
-    }
-
-    @Override
-    public void deletar() {
-
-    }
-
-    @Override
-    public void listar() {
-
-    }
-
-    @Override
-    public void alterar() {
-
-    }
 }
