@@ -72,7 +72,7 @@ public class SplashActivity extends AppCompatActivity {
             Log.e("LISTAVIEW", "onCreate: " + obj.getId() + " " + obj.getNome() + " " + obj.getEmail() );
 
         }
-
+//
 
         inicializarMain();
 
