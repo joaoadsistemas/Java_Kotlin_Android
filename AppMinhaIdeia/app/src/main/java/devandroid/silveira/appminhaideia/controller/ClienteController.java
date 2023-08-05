@@ -34,14 +34,14 @@ public class ClienteController extends AppDataBase implements ICrud<Cliente> {
 
         // Enviar os dados(dadosDoObjeto) para a classe AppDataBase
         // utilizando um método capaz de adicionar o OBJ no banco de dados
+
+        insert("Cliente", dadoDoObjeto);
     }
 
     @Override
-    public void deletar(Cliente obj) {
+    public void deletar(int id) {
 
-        dadoDoObjeto = new ContentValues();
-
-        dadoDoObjeto.put("id", obj.getId());
+        deleteByID("Cliente", id);
 
         //Deletar
         // SQL ->>>> DELETE from TABELA whre ID = ?????
@@ -55,9 +55,7 @@ public class ClienteController extends AppDataBase implements ICrud<Cliente> {
     @Override
     public List<Cliente> listar() {
 
-        List<Cliente> lista = new ArrayList<>();
-
-        return lista;
+        return getAllClientes("Cliente");
 
     }
 
@@ -70,6 +68,9 @@ public class ClienteController extends AppDataBase implements ICrud<Cliente> {
         dadoDoObjeto.put("nome", obj.getNome());
         dadoDoObjeto.put("email", obj.getEmail());
         dadoDoObjeto.put("id", obj.getId());
+
+
+        update("Cliente", dadoDoObjeto);
 
         //Alterar
         // SQL ->>>> UPDATE

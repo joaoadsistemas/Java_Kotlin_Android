@@ -8,7 +8,7 @@ import devandroid.silveira.appminhaideia.model.Cliente;
 public interface ICrud<T> {
 
     public void incluir(T obj);
-    public void deletar(T obj);
+    public void deletar(int id);
     public List<T> listar();
     public void alterar(T obj);
 

@@ -23,18 +23,17 @@ public class ProdutoController extends AppDataBase implements ICrud<Produto> {
         dadoDoObjeto = new ContentValues();
 
         dadoDoObjeto.put("marca", obj.getMarca());
-        dadoDoObjeto.put("prduto",obj.getProduto());
+        dadoDoObjeto.put("produto",obj.getProduto());
+
+        insert("Produto", dadoDoObjeto);
 
 
     }
 
     @Override
-    public void deletar(Produto obj) {
+    public void deletar(int id) {
 
-        dadoDoObjeto = new ContentValues();
-
-        dadoDoObjeto.put("id", obj.getId());
-
+        deleteByID("Produto", id);
     }
 
     @Override
@@ -50,7 +49,10 @@ public class ProdutoController extends AppDataBase implements ICrud<Produto> {
         dadoDoObjeto = new ContentValues();
 
         dadoDoObjeto.put("marca", obj.getMarca());
-        dadoDoObjeto.put("prduto",obj.getProduto());
+        dadoDoObjeto.put("produto",obj.getProduto());
         dadoDoObjeto.put("id", obj.getId());
+
+
+        update("Produto", dadoDoObjeto);
     }
 }
