@@ -55,4 +55,8 @@ public class AppDataBase extends SQLiteOpenHelper {
         db.insert(tabela, null,  dados);
     }
 
+    public void delete () {
+
+    }
+
 }
