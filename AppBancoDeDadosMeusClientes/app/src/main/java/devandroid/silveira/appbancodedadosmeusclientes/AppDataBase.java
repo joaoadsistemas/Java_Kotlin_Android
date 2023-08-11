@@ -1,5 +1,6 @@
 package devandroid.silveira.appbancodedadosmeusclientes;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -48,4 +49,14 @@ public class AppDataBase extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
+
+
+    public void insert (String tabela, ContentValues dados) {
+        db.insert(tabela, null,  dados);
+    }
+
+    public void delete () {
+
+    }
+
 }
