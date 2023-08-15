@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Meus Clientes</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Cliente</string>
+    <string name="nav_header_subtitle">Profº Marco Maddo</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Sair</string>
+    <string name="modelo_fragment">Fragmento Modelo</string>
+</resources>
