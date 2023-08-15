@@ -3,4 +3,11 @@
     <color name="colorPrimary">#4CAF50</color>
     <color name="colorPrimaryDark">#859F67</color>
     <color name="colorAccent">#FFC107</color>
+
+
+
+    <!-- cores dos backgrounds das telas -->
+    <color name="vermelho">#8F1108</color>
+    <color name="preto">#000000</color>
+    <color name="azul">#07487C</color>
 </resources>

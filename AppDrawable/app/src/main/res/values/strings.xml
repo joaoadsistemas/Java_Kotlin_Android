@@ -6,5 +6,12 @@
     <string name="nav_header_subtitle">Profº Marco Maddo</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Sair</string>
+
+
+
+    <!-- nome dos fragmentos das telas -->
     <string name="modelo_fragment">Fragmento Modelo</string>
+    <string name="fragmento_preto">Fragmento Preto</string>
+    <string name="fragmento_vermelho">Fragmento Vermelho</string>
+    <string name="fragmento_azul">Fragmento Azul</string>
 </resources>
