@@ -4,8 +4,8 @@ import android.content.Context;
 
 import java.util.List;
 
-import devandroid.silveira.appminhaideia.datasource.AppDataBase;
-import devandroid.silveira.appminhaideia.model.Cliente;
+import devandroid.silveira.appmeusclientes.datasource.AppDataBase;
+import devandroid.silveira.appmeusclientes.model.Cliente;
 
 
 public class ClienteController extends AppDataBase implements ICrud<Cliente> {

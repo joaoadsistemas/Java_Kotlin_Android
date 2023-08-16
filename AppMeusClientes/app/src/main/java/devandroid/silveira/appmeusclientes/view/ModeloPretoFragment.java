@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import devandroid.silveira.appdrawable.R;
+import devandroid.silveira.appmeusclientes.R;
 
 
 public class ModeloPretoFragment extends Fragment {

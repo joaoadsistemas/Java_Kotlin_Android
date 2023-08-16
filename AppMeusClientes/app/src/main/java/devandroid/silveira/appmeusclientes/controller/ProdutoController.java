@@ -6,8 +6,8 @@ import android.content.Context;
 import java.util.ArrayList;
 import java.util.List;
 
-import devandroid.silveira.appminhaideia.datasource.AppDataBase;
-import devandroid.silveira.appminhaideia.model.Produto;
+import devandroid.silveira.appmeusclientes.datasource.AppDataBase;
+import devandroid.silveira.appmeusclientes.model.Produto;
 
 public class ProdutoController extends AppDataBase implements ICrud<Produto> {
 

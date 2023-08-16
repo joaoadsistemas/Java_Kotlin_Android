@@ -10,10 +10,10 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-import devandroid.silveira.appdrawable.core.AppUtil;
-import devandroid.silveira.appdrawable.datamodel.ClienteDataModel;
-import devandroid.silveira.appdrawable.datamodel.ProdutoDataModel;
-import devandroid.silveira.appdrawable.model.Cliente;
+import devandroid.silveira.appmeusclientes.core.AppUtil;
+import devandroid.silveira.appmeusclientes.datamodel.ClienteDataModel;
+import devandroid.silveira.appmeusclientes.datamodel.ProdutoDataModel;
+import devandroid.silveira.appmeusclientes.model.Cliente;
 
 
 public class AppDataBase extends SQLiteOpenHelper {
