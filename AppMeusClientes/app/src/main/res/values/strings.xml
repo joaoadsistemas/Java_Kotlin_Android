@@ -16,4 +16,21 @@
     <string name="fragmento_preto">Fragmento Preto</string>
     <string name="fragmento_vermelho">Fragmento Vermelho</string>
     <string name="fragmento_azul">Fragmento Azul</string>
+
+
+    <!-- Layout de adicionar novo cliente -->
+    <string name="txt_titulo">Adicionar novo Cliente</string>
+    <string name="txt_hint_nome_completo">Nome Completo</string>
+    <string name="txt_hint_telefone">Telefone</string>
+    <string name="txt_hint_email">Email</string>
+    <string name="txt_hint_cep">Cep</string>
+    <string name="txt_hint_logradouro">Logradouro</string>
+    <string name="txt_hint_numero">Número</string>
+    <string name="txt_hint_bairro">Bairro</string>
+    <string name="txt_hint_cidade">Cidade</string>
+    <string name="txt_hint_estado">Estado</string>
+    <string name="txt_termos_uso">Termos de Uso</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="btn_salvar">Salvar</string>
+
 </resources>

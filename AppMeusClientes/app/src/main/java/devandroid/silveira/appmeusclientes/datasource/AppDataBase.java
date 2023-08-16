@@ -18,7 +18,7 @@ import devandroid.silveira.appmeusclientes.model.Cliente;
 
 public class AppDataBase extends SQLiteOpenHelper {
 
-    private static final String DB_NAME = "AppMinhaIdeia.sqlite";
+    private static final String DB_NAME = "AppMeusClientes.sqlite";
 
     private static final int DB_VERSION = 1;
 
