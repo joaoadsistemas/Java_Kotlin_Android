@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/vermelho"
-    tools:context=".ModeloVermelhoFragment">
+    tools:context=".view.ModeloVermelhoFragment">
 
 
     <!-- Terceiro Passo -->
@@ -16,7 +16,6 @@
         android:layout_marginTop="30sp"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
-        android:text="@string/modelo_fragment" />
+        android:textColor="@color/colorPrimary" />
 
 </FrameLayout>

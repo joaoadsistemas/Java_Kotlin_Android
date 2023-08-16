@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
+    <!-- Action bar -->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,8 +21,10 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <!-- Conteudo dinãmico do fragmento -->
     <include layout="@layout/content_main" />
 
+    <!-- botão floating action button -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"

@@ -3,14 +3,16 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Cliente</string>
-    <string name="nav_header_subtitle">Profº Marco Maddo</string>
+    <string name="nav_header_subtitle">Joao Henrique</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Sair</string>
 
+    <!-- Opções do menu principal -->
 
 
-    <!-- nome dos fragmentos das telas -->
     <string name="modelo_fragment">Fragmento Modelo</string>
+
+    <!-- Opções do menu lateral Drawer -->
     <string name="fragmento_preto">Fragmento Preto</string>
     <string name="fragmento_vermelho">Fragmento Vermelho</string>
     <string name="fragmento_azul">Fragmento Azul</string>
