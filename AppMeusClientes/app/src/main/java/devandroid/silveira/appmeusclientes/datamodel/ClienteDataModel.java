@@ -12,7 +12,15 @@ public class ClienteDataModel {
     public static String queryCriarTabela = "CREATE TABLE Cliente (" +
             "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
             "nome TEXT, " +
-            "email TEXT" +
+            "telefone TEXT, " +
+            "email TEXT, " +
+            "cep INTEGER, " +
+            "logradouro TEXT, " +
+            "numero TEXT, " +
+            "bairro TEXT, " +
+            "cidade TEXT, " +
+            "estado TEXT, " +
+            "termos_de_uso INTEGER" +
             ")";
 
 

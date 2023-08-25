@@ -24,7 +24,15 @@ public class ClienteController extends AppDataBase implements ICrud<Cliente> {
         // Key, valor (parecido com SharedPreferences)
 
         dadoDoObjeto.put("nome", obj.getNome());
+        dadoDoObjeto.put("telefone", obj.getTelefone());
         dadoDoObjeto.put("email", obj.getEmail());
+        dadoDoObjeto.put("cep", obj.getCep());
+        dadoDoObjeto.put("logradouro", obj.getLogradouro());
+        dadoDoObjeto.put("numero", obj.getNumero());
+        dadoDoObjeto.put("bairro", obj.getBairro());
+        dadoDoObjeto.put("cidade", obj.getCidade());
+        dadoDoObjeto.put("estado", obj.getEstado());
+        dadoDoObjeto.put("termos_de_uso", obj.isTermosDeUso());
 
         // ID SE PASSA NO DELETAR E ALTERAR, POIS É A
         // CHAVE GERADA AUTOMATICAMENTE PELO SQL A
@@ -35,6 +43,7 @@ public class ClienteController extends AppDataBase implements ICrud<Cliente> {
         // utilizando um método capaz de adicionar o OBJ no banco de dados
 
         insert("Cliente", dadoDoObjeto);
+
     }
 
     @Override

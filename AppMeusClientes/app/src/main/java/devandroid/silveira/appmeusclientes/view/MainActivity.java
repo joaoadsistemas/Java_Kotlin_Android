@@ -1,7 +1,5 @@
 package devandroid.silveira.appmeusclientes.view;
 
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,6 +17,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
 import devandroid.silveira.appmeusclientes.R;
+import devandroid.silveira.appmeusclientes.controller.ClienteController;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -36,6 +35,7 @@ public class MainActivity extends AppCompatActivity
     MenuItem nav_preto;
     MenuItem nav_vermelho;
     MenuItem nav_azul;
+    ClienteController clienteController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +70,10 @@ public class MainActivity extends AppCompatActivity
 
         // content_fragment usado para receber os layouts dos fragmentos
         fragmentManager.beginTransaction().replace(R.id.content_fragment, new ModeloVermelhoFragment()).commit();
+
+
+        clienteController = new ClienteController(this);
+
 
     }
 
@@ -111,39 +115,17 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         // TODO: obter ID para a opção selecionada no MENU DRAWER
-        if (id == R.id.nav_preto) {
+        if (id == R.id.nav_adicionar_cliente) {
 
             menu = navigationView.getMenu();
 
-            nav_preto = menu.findItem(R.id.nav_preto);
-            nav_preto.setTitle("Preto Ativado");
-
-            nav_vermelho = menu.findItem(R.id.nav_vermelho);
-            nav_vermelho.setTitle("Vermelho");
-
-            nav_azul = menu.findItem(R.id.nav_azul);
-            nav_azul.setTitle("Azul");
-
-            navigationView.setItemTextColor(ColorStateList.valueOf(Color.BLACK));
-
-            fragmentManager.beginTransaction().replace(R.id.content_fragment, new ModeloPretoFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.content_fragment, new AdicionarClienteFragment()).commit();
 
         } else if (id == R.id.nav_vermelho) {
 
             menu = navigationView.getMenu();
 
-            nav_preto = menu.findItem(R.id.nav_preto);
 
-            nav_preto.setTitle("Preto");
-
-            nav_vermelho = menu.findItem(R.id.nav_vermelho);
-            nav_vermelho.setTitle("Vermelho Ativado");
-
-            nav_azul = menu.findItem(R.id.nav_azul);
-            nav_azul.setTitle("Azul");
-
-            // TODO: Mudar a cor de todos os itens do menu programaticamente
-            navigationView.setItemTextColor(ColorStateList.valueOf(Color.BLACK));
 
             fragmentManager.beginTransaction().replace(R.id.content_fragment, new ModeloVermelhoFragment()).commit();
 
@@ -151,16 +133,7 @@ public class MainActivity extends AppCompatActivity
 
             menu = navigationView.getMenu();
 
-            nav_preto = menu.findItem(R.id.nav_preto);
-            nav_preto.setTitle("Preto");
 
-            nav_vermelho = menu.findItem(R.id.nav_vermelho);
-            nav_vermelho.setTitle("Vermelho");
-
-            nav_azul = menu.findItem(R.id.nav_azul);
-            nav_azul.setTitle("Azul Ativado");
-
-            navigationView.setItemTextColor(ColorStateList.valueOf(Color.BLACK));
 
             fragmentManager.beginTransaction().replace(R.id.content_fragment, new ModeloAzulFragment()).commit();
 

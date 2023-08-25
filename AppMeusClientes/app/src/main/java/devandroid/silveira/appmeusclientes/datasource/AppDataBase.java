@@ -12,7 +12,6 @@ import java.util.List;
 
 import devandroid.silveira.appmeusclientes.core.AppUtil;
 import devandroid.silveira.appmeusclientes.datamodel.ClienteDataModel;
-import devandroid.silveira.appmeusclientes.datamodel.ProdutoDataModel;
 import devandroid.silveira.appmeusclientes.model.Cliente;
 
 
@@ -35,7 +34,6 @@ public class AppDataBase extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL(ClienteDataModel.criarTabela());
-        db.execSQL(ProdutoDataModel.criarTabela());
 
     }
 
